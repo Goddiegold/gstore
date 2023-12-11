@@ -64,7 +64,7 @@ public function getUsers(){
         ]);
     
         // return response()->json(['message' => 'Registration successful'], 201);
-        $request->session()->put('estore-user-token',$user);
-        return redirect("/dashboard");
+        // $request->session()->put('estore-user-token',$user);
+        return redirect("/login");
     }
 }

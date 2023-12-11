@@ -3,6 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
+<h4>Hi there, {{session('estore-user-token')->name}} 👋</h4>
 <div class="d-flex align-items-center justify-content-between"><h1>Users Record</h1>
   <a class="btn btn-danger"   href="{{ route('logout') }}">Logout</a></div>
 
