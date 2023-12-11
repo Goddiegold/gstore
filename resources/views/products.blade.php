@@ -9,11 +9,14 @@
         @foreach ($products as $product)
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1609607285694-e283bd2ea9a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="{{ $product['name'] }}">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1399&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="{{ $product['name'] }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product['name'] }}</h5>
-                        <p class="card-text">Product description goes here.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="card-title">{{ $product['name'] }}</h5>
+                            <h6>${{$product['price']}}</h6>
+                        </div>
+                        <p class="card-text">{{ $product['name'] }} is a very lovely product.</p>
+                        <a href="#" class="btn btn-danger">Add to Cart</a>
                     </div>
                 </div>
             </div>

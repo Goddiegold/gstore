@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="d-flex align-items-center justify-content-between"><h1>Users Record</h1>
-  <a class="btn btn-primary"   href="{{ route('logout') }}">Logout</a></div>
+  <a class="btn btn-danger"   href="{{ route('logout') }}">Logout</a></div>
 
 <table class="table">
     <thead>

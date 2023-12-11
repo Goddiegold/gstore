@@ -27,6 +27,6 @@
     value="{{old('password')}}">
      @error('password') <span style="color:red;">{{$message}}</span>@enderror
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-danger">Submit</button>
 </form>
 @endsection

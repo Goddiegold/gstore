@@ -21,9 +21,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", function(){
     $products = [
-        ['id' => 1, 'name' => 'Product 1', 'price' => 19.99],
-        ['id' => 2, 'name' => 'Product 2', 'price' => 29.99],
-        ['id' => 3, 'name' => 'Product 3', 'price' => 39.99],
+        ['id' => 1, 'name' => 'Smart Watch', 
+        'price' => 19.99 ],
+        ['id' => 2, 'name' => 'Iphone 15 Pro Max','price' => 29.99],
+        ['id' => 1, 'name' => 'Gaming Monitor', 
+        'price' => 3000 ],
+        ['id' => 2, 'name' => 'Macbook Air','price' => 54.66],
+        ['id' => 3, 'name' => 'Dell G3 Odyssey', 'price' => 29.99],
+        ['id' => 3, 'name' => 'Mouse', 'price' => 29.99],  
     ];
     return view("home",["products"=>$products]);
 })->name('home');
@@ -32,10 +37,14 @@ Route::view("/services", "services")->name('services');
 
 Route::get("/products", function(){
     $products = [
-        ['id' => 1, 'name' => 'Product 1', 'price' => 19.99],
-        ['id' => 2, 'name' => 'Product 2','price' => 29.99],
-        ['id' => 3, 'name' => 'Product 3', 'price' => 29.99],
-        // Add more products as needed
+        ['id' => 1, 'name' => 'Smart Watch', 
+        'price' => 19.99 ],
+        ['id' => 2, 'name' => 'Iphone 15 Pro Max','price' => 29.99],
+        ['id' => 1, 'name' => 'Gaming Monitor', 
+        'price' => 3000 ],
+        ['id' => 2, 'name' => 'Macbook Air','price' => 54.66],
+        ['id' => 3, 'name' => 'Dell G3 Odyssey', 'price' => 29.99],
+        ['id' => 3, 'name' => 'Mouse', 'price' => 29.99],  
     ];
 return view("products", ['products'=>$products]);
 })->name('products');
@@ -69,7 +78,7 @@ Route::get('/logout',function(){
 
 // Route::get("/get-data",[UsersController::class, "getData"]);
 
-Route::get("/dashboard",[UsersController::class, "getUsers"]);
+Route::get("/dashboard",[UsersController::class, "getUsers"])->name('dashboard');
 
 Route::post("/handle-login",[UsersController::class, "handleLogin"]);
 
