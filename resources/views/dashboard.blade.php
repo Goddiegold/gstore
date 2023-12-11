@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-</head>
-<body>
-    <h1>Welcome {{session('keyvalue')['name']}}</h1>
-    <a href="{{route('logout')}}">Logout</a>
-</body>
-</html>
+@extends('layout')
+
+@section('title', 'Dashboard')
+
+@section('content')
+<h1>Users Record</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+        @foreach ($users as $user)
+        <tr>
+            <th scope="row">{{$user->id}}</th>
+            <td>{{$user->name}}</td>
+            <td>{{$user->email}}</td>
+            <td>{{$user->created_at}}</td>
+        </tr>
+        @endforeach
+
+    </tbody>
+</table>
+
+@endsection

@@ -48,6 +48,12 @@ Route::view("/login", "login")->name('login');
 
 Route::view("/register", "register")->name('register');
 
+// Route::get("/get-data",[UsersController::class, "getData"]);
+
+Route::get("/dashboard",[UsersController::class, "getUsers"]);
+
 Route::post("/handle-login",[UsersController::class, "handleLogin"]);
 
 Route::post("/handle-register",[UsersController::class, "handleRegister"]);
+
+
