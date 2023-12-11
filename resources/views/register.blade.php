@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
- <title>Login Form</title>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
+@extends('layout')
+
+@section('title', 'Register Page')
+
+@section('content')
     <form style="width:300px; margin: 20px auto;"
      method="POST"
-      action="get-session">
+      action="handle-register">
       {{-- @method('PUT') --}}
       @csrf() 
         <h1>Register</h1>
@@ -47,3 +45,4 @@
 </form>
 </body>
 </html>
+@endsection

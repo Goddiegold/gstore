@@ -3,13 +3,16 @@
 @section('title', 'Dashboard')
 
 @section('content')
-<h1>Users Record</h1>
+<div class="d-flex align-items-center justify-content-between"><h1>Users Record</h1>
+  <a class="btn btn-primary"   href="{{ route('logout') }}">Logout</a></div>
+
 <table class="table">
     <thead>
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
+        <th scope="col">Registered On</th>
       </tr>
     </thead>
     <tbody>

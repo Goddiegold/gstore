@@ -44,9 +44,28 @@ Route::view("/contact", "contact")->name('contact');
 
 Route::view("/about", "about")->name('about');
 
-Route::view("/login", "login")->name('login');
+Route::get("/login", function(){
+    if(session()->has('estore-user-token')){
+        return redirect("/dashboard");
+    }else{
+        return view("login");
+}
+})->name('login');
 
-Route::view("/register", "register")->name('register');
+Route::get("/register",  function(){
+    if(session()->has('estore-user-token')){
+        return redirect("/dashboard");
+    }else{
+        return view("register");
+}
+})->name('register');
+
+Route::get('/logout',function(){
+    if(session()->has('estore-user-token')){
+        session()->pull('estore-user-token');
+        return redirect("/login");
+    }
+})->name('logout');
 
 // Route::get("/get-data",[UsersController::class, "getData"]);
 
